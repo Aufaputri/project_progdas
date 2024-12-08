@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>FORM INPUT MASTER dan Stock DATA BARANG</h1>
+
+        <form action="" id="formdata" method="post" enctype="multipart/form-data">
+
+                <label for="id_produk">Kode Produk</label>
+                <input type="text" name="id_produk" id="id_produk" placeholder="MD-001" readonly>
+
+                <label for="nama_produk">Nama Produk</label>
+                <input type="text" name="nama_produk" id="nama_produk" placeholder="Nama Produk" required>
+
+                <label for="harga_produk">Harga Produk</label>
+                <input type="number" name="harga_produk" id="harga_produk" placeholder="10000" required min="0" step="0.01">
+
+                <label for="satuan_produk">Masukan Satuan:</label>
+                <select name="satuan_produk" id="satuan_produk" required>
+                    <option value="" disabled selected>Pilih Satuan</option>
+                    <option value="Gelas">Gelas</option>
+                    <option value="Cup">Cup</option>
+                    <option value="Box">Box</option>
+                    <option value="Piring">Piring</option>
+                </select>
+                
+                <label for="kategori_produk">Kategori:</label>
+                <select name="kategori_produk" id="kategori_produk" required>
+                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Buah">Buah</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Snack">Snack</option>
+                </select>
+
+                <label for="gambar_produk">Link Gambar Produk</label>
+                <input type="url" name="gambar_produk" id="gambar_produk" placeholder="https://example.com/image.jpg" required>
+
+                <label for="stock_produk">Stok Produk</label>
+                <input type="number" name="stok_produk" id="stok_produk" placeholder="1000" required min="0">
+
+                <button type="Simpan">Simpan</button>
+        </form>
+
+        <h2>Data Produk</h2>
+        <table style="width: 100%;" aria-labelledby="product-list">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kode Produk</th>
+                    <th>Nama Produk</th>
+                    <th>Harga Produk</th>
+                    <th>Satuan</th>
+                    <th>Kategori Produk</th>
+                    <th>Gambar Produk</th>
+                    <th>Stok Produk</th>
+                    <th>Modify</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+            </tbody>
+        </table>
+    </div>
+<script src="function.js"></script>
+</body>
+</html>
